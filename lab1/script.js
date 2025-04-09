@@ -7,17 +7,17 @@ const sum = document.getElementById("Sum");
 const avg = document.getElementById("Average");
 const min = document.getElementById("Min");
 const max = document.getElementById("Max");
+const inputs = document.querySelectorAll("input");
 
-
-buttonCalc.addEventListener("click",() =>{
-    CalculateResults();
-})
+inputs.forEach(input => {
+    input.addEventListener("input", CalculateResults);
+});
 
 function CalculateResults(){
     const val1 = parseFloat(field1.value)|| 0;
     const val2 = parseFloat(field2.value)|| 0;
     const val3 = parseFloat(field3.value)|| 0;
-    const val4 = parseFloat(field4.value)
+    const val4 = parseFloat(field4.value)|| 0;
 
     const valSum = val1 + val2 + val3 + val4;
     const valAverage = valSum/4;
