@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drumkit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="sounds-container">
+        <audio id="sound-a" src="sounds/boom.wav" controls></audio>
+        <audio id="sound-s" src="sounds/kick.wav" controls></audio>
+        <audio id="sound-d" src="sounds/tink.wav" controls></audio>
+        <audio id="sound-f" src="sounds/snare.wav" controls></audio>
+    </div>
+
+    <p>A - boom</p>
+    <p>S - kick</p>
+    <p>D - tink</p>
+    <p>F - snare</p>
+    
+    <button onclick="startRecording()">🎤Start recording</button>
+    <button onclick="stopRecording()">⏹️Stop recording</button>
+    <button onclick="playRecorded()">▶️Play recorded</button>
+    <script src="script.js"></script>
+
+    <h3>Choose channel:</h3>
+    <button onclick="startRecording(1)">Channel 1</button>
+    <button onclick="startRecording(2)">Channel 2</button>
+    <button onclick="startRecording(3)">Channel 3</button>
+    <button onclick="startRecording(4)">Channel 4</button>
+
+    <h3>Play channel:</h3>
+    <button onclick="playChannel(1)">Channel 1</button>
+    <button onclick="playChannel(2)">Channel 2</button>
+    <button onclick="playChannel(3)">Channel 3</button>
+    <button onclick="playChannel(4)">Channel 4</button>
+</body>
+</html>
