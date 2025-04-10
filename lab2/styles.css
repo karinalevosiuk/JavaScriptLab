@@ -27,6 +27,9 @@ button{
     cursor: pointer;
     z-index: 10;
 }
+button:hover{
+    background-color: #ecd4d4;
+}
 
 #dots {
     margin-top: 20px;  
@@ -47,7 +50,11 @@ button{
     
 }
 .dot:hover{
-    background-color: #333;
+    background-color: #ecd4d4;
+}
+.dot.active{
+    background-color: #ecd4d4;
+    box-shadow: 0 0 5px #000;
 }
 #prev { left: 10px;}
 #next { right: 10px;}
