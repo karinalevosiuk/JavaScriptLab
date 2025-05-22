@@ -1,7 +1,7 @@
 let lastWeatherData = null;
 
 function CheckWeather(){
-    const apiKey = "f906a155a9831b57d80de2cac402b90a";
+    const apiKey = "cc60921761b81771bb5c791d22b21064";
     const city = document.getElementById("input").value;
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`;
     const content = document.getElementById("content");
