@@ -1,0 +1,116 @@
+body {
+  background-color: #d6eaf8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#header {
+  color: #a3b3c2;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.note {
+  background-color: #aed6f1;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.note input[type="text"],
+.note textarea{
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.note input[type="color"] {
+  appearance: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+
+.note input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 50%;
+}
+
+.note input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+
+.note button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #5dade2;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.note button:hover {
+  background-color: #3498db;
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.new-note > div {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-note h2 {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+}
+
+.new-note p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+.pin {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.pin input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #f1cde0; /* можно заменить на любой цвет */
+  cursor: pointer;
+}

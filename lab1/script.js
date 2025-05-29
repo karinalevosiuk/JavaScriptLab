@@ -14,6 +14,8 @@ inputs.forEach(input => {
 });
 
 function CalculateResults(){
+    // парсфлоат потому что input.value всегда возвращает строку даже 
+    // если type="number"
     const val1 = parseFloat(field1.value)|| 0;
     const val2 = parseFloat(field2.value)|| 0;
     const val3 = parseFloat(field3.value)|| 0;

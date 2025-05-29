@@ -8,7 +8,7 @@ const buttonStart = document.getElementById("start");
 let x = 450;
 let y = 500;
 
-// счёт и таймер
+// счёт и таймер, состояние игры
 let score = 0;
 let timeLeft = 0;
 let gameActive = false;

@@ -1,14 +1,16 @@
+// обработка нажатия клавиш
+// получаешь клавишу и ищешь по ней элемент
 function PlaySound(event){
     const key = event.key.toLowerCase();
     const audioElement = document.getElementById(`sound-${key}`);
 
     if (audioElement)
     {
-        audioElement.currentTime = 0;
+        audioElement.currentTime = 0; // сбрасываешь проигрывание, чтобы звук играл даже при быстром повторном нажатии
         audioElement.play();
         console.log(`▶️Playing sound: ${audioElement.src}`);
 
-        if (recording && activeChannel){
+        if (recording && activeChannel){ // если включена запись и выбран канал сохраняешь событие со временем (key, time) в массив активного канала
             const time = Date.now() - recordingStartTime;
             channels[activeChannel].push({key, time});
             console.log(`💾Recorded: ${activeChannel} within ${time} ms`);
@@ -21,7 +23,7 @@ function PlaySound(event){
 
 document.addEventListener('keydown', PlaySound);    
 
-let channels = {
+let channels = { // каждому каналу соответствует массив звуков
     1: [],
     2: [],
     3: [],
@@ -32,7 +34,8 @@ let activeChannel = null;
 let recording = false;
 let recordingStartTime = 0;
 
-function startRecording(channelNumber){
+// запуск записи
+function startRecording(channelNumber){ 
     // recordedSound = [];
     activeChannel = channelNumber;
     recording = true;
@@ -61,6 +64,7 @@ function playChannel(channelNumber){
     }}
 }
 
+// остановка записи: сбрасывание активного канала, выключение рекординг
 function stopRecording(){
     if (activeChannel === null) {
         console.log("⚠️ No active recording to stop!");
@@ -78,12 +82,12 @@ function stopRecording(){
     activeChannel = null;
 }
 
-
+// воспроизведение всех каналов вместе: складывание событий со всех каналов в один массив, сортировка по time чтобы сохранить порядок, проигрывание
 function playRecorded(){
     let allEvents = [];
 
     for (let channelNumber in channels){
-        allEvents=allEvents.concat(channels[channelNumber]);
+        allEvents=allEvents.concat(channels[channelNumber]); // создает новый массив объединяющий 2 массива
     }
     allEvents.sort((a,b) =>a.time - b.time);
 

@@ -1,3 +1,6 @@
+// вытаскивает строку из локагстораге по ключу notes
+// localstorage встроенное хранилище браузера
+
 let notes = JSON.parse(localStorage.getItem('notes')) || [];
 
 const form = document.getElementById('noteform');

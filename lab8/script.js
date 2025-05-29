@@ -75,7 +75,7 @@ function LoadSavedCities(){
     let savedCitiesArray = JSON.parse(localStorage.getItem("cities")) || [];
     // Пройтись по массиву через forEach
     savedCitiesArray.forEach(cityName =>{
-        const apiKey = "f906a155a9831b57d80de2cac402b90a";
+        const apiKey = "cc60921761b81771bb5c791d22b21064";
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName   }&appid=${apiKey}&units=metric&lang=en`;
 
         const cityRow = document.createElement("div");
